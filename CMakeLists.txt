@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 2.8) 
-project(Hungarian)
+project(Kuhn-Munkres)
 #find_package(OpenCV REQUIRED)
 set(NAME_SRC
-    src/hungarian.cpp
-    src/test.cpp
+    hungarian.cpp
+    test.cpp
 )
 
 set(NAME_HEADERS       
-    include/hungarian.hpp
+    hungarian.hpp
 )
 
 # add a compiler flag for the C++2011 standard
@@ -19,4 +19,4 @@ link_directories(${CMAKE_BINARY_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 add_executable(hungarian ${NAME_SRC} ${NAME_HEADERS})
 
-target_link_libraries(Hungarian)
+target_link_libraries(Kuhn-Munkres)
